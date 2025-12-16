@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Seat</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .app {
+      width: 360px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+      padding-bottom: 70px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #7b2ff7;
+      letter-spacing: 0.5px;
+    }
+
+    /* Seat Grid */
+    .seat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .seat {
+      padding: 12px 0;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      background: #e0e0e0;
+    }
+
+    .seat.selected {
+      background: #7b2ff7;
+      color: #fff;
+    }
+
+    .seat.occupied {
+      background: #999;
+      color: #fff;
+      cursor: not-allowed;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-top: 15px;
+      color: #555;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #7b2ff7;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+  <h2>Select Your Seat</h2>
+
+  <div class="seat-grid">
+    <div class="seat">1A</div>
+    <div class="seat occupied">1B</div>
+    <div class="seat">1C</div>
+    <div class="seat">1D</div>
+
+    <div class="seat">2A</div>
+    <div class="seat occupied">2B</div>
+    <div class="seat">2C</div>
+    <div class="seat">2D</div>
+  </div>
+
+  <div class="legend">
+    <span>⬜ Available</span>
+    <span>⬛ Occupied</span>
+    <span>🟣 Selected</span>
+  </div>
+
+  <button onclick="confirmSeat()">Confirm Seat</button>
+</div>
+
+<script>
+  let selectedSeat = null;
+
+  document.querySelectorAll('.seat').forEach(seat => {
+    if (!seat.classList.contains('occupied')) {
+      seat.addEventListener('click', () => {
+        document.querySelectorAll('.seat').forEach(s => s.classList.remove('selected'));
+        seat.classList.add('selected');
+        selectedSeat = seat.textContent;
+      });
+    }
+  });
+
+  function confirmSeat() {
+  if (!selectedSeat) {
+    alert("Please select a seat first.");
+  } else {
+    localStorage.setItem("selectedSeat", selectedSeat);
+    window.location.href = "booking-details.html";
+  }
+}
+
+
+</script>
+
+</body>
+</html>
