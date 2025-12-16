@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Find Bus - BusGo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #7b2ff7, #9f7aea);
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .app {
+      width: 360px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    h2 {
+      color: #7b2ff7;
+      text-align: center;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #7b2ff7;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .back {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .back a {
+      text-decoration: none;
+      color: #7b2ff7;
+      font-weight: bold;
+    }
+    button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.primary-btn {
+  background: #7b2ff7;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #eee;
+  color: #333;
+}
+
+.danger-btn {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <h2>Find Available Bus</h2>
+
+    <input type="text" placeholder="From">
+    <input type="text" placeholder="To">
+    <input type="date">
+
+    <button onclick="location.href='bus-list.html'">Search Bus</button>
+
+    <div class="back">
+      <a href="home.html">← Back to Home</a>
+    </div>
+  </div>
+
+</body>
+</html>

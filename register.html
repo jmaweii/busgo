@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BusGo Register</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #7b2ff7, #9f7aea);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .app {
+      width: 360px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #7b2ff7;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #7b2ff7;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+
+    .footer a {
+      color: #7b2ff7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.primary-btn {
+  background: #7b2ff7;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #eee;
+  color: #333;
+}
+
+.danger-btn {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <h2>Create Account</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <button>Register</button>
+
+    <div class="footer">
+      Already have an account? <a href="index.html">Login</a>
+    </div>
+  </div>
+
+</body>
+</html>
