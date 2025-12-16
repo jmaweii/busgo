@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BusGo Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding-top: 20px;
+    }
+
+    .app {
+      width: 360px;
+      background: #fff;
+      border-radius: 20px;
+      padding: 70px;
+    }
+
+    h2 {
+      color: #7b2ff7;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      background: #7b2ff7;
+      color: white;
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .logout {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .logout a {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    button {
+  transition: all 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.primary-btn {
+  background: #7b2ff7;
+  color: #fff;
+}
+
+.secondary-btn {
+  background: #eee;
+  color: #333;
+}
+
+.danger-btn {
+  background: #ff4d4d;
+  color: #fff;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="app">
+    <h2>Welcome to BusGo</h2>
+
+    <a href="find-bus.html" style="text-decoration:none;">
+        <div class="card">Find Available Bus</div>
+      </a>
+    <div class="card">My Bookings</div>
+
+    <div class="logout">
+      <a href="index.html">Logout</a>
+    </div>
+  </div>
+ 
+<div class="nav" style="
+  position: fixed;
+  bottom: 0;
+  width: 360px;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+">
+  <a href="home.html" style="text-decoration:none;color:#7b2ff7;font-weight:bold;">Home</a>
+  <a href="find-bus.html" style="text-decoration:none;color:#7b2ff7;font-weight:bold;">Find</a>
+  <a href="my-bookings.html" style="text-decoration:none;color:#7b2ff7;font-weight:bold;">Bookings</a>
+</div>
+
+</body>
+</html>
